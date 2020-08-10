@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,400;0,900;1,300&display=swap");
+
+body {
+  background-color: #eee;
+  font-family: "Mulish", sans-serif;
+}
+
+header {
+  height: 60px;
+  background: -webkit-linear-gradient(left, #ff3333, #eee);
+}
+
+main h1 {
+  padding: 10px;
+  text-align: center;
+}
+
+/* main .Cards {
+  margin: 0px auto;
+} */
+
+.card {
+  height: 350px;
+  width: 250px;
+  background-color: white;
+
+  transition: all 0.2s ease;
+  border-radius: 5px;
+  -webkit-box-shadow: 7px 7px 19px -10px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 7px 7px 19px -10px rgba(0, 0, 0, 1);
+  box-shadow: 7px 7px 19px -10px rgba(0, 0, 0, 1);
+
+  display: inline-block;
+  margin: 15px;
+}
+
+/* .card * {
+  transition: all 0.2s ease;
+} */
+
+.card__imagen {
+  height: 60%;
+  /*para ocultar el desbordamiento de la imagen*/
+  overflow: hidden;
+  position: relative;
+}
+
+.card__imagen img {
+  width: 100%;
+  transform: translate(0, -60px);
+}
+
+.card__cirulofecha {
+  background-color: orangered;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.card__txtphoto {
+  position: absolute;
+  bottom: 0px;
+  background: orangered;
+  font-family: "Mulish", sans-serif;
+
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  border-radius: 2px;
+  /* box-shadow: 20px 20px 10px grey; */
+}
+
+.card__info {
+  /* padding: 20px; */
+  position: relative;
+  height: 40%;
+}
+
+.card__info-title {
+  /* text-align: center; */
+  margin-left: 20px;
+  padding-top: 15px;
+  font-family: "Mulish", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card__info-text {
+  color: orangered;
+  font-family: "Mulish", sans-serif;
+  font-size: 13px;
+  margin-top: 6px;
+
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.card__info-feed {
+  /* margin-top: 45px; */
+  font-size: 10px;
+  font-family: "Mulish", sans-serif;
+  color: gray;
+  text-align: right;
+
+  /* margin-right: 25px; */
+
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+}
+
+.card:hover .card__imagen {
+  height: 40%;
+  cursor: pointer;
+}
+
+.card:hover .card__imagen img {
+  /* filter: grayscale(0.6); */
+  filter: brightness(0.5);
+}
+.card:hover .card__info {
+  cursor: pointer;
+  height: 60%;
+}
+
+.card__info-descrip {
+  /* text-align: justify; */
+  padding-top: 7px;
+  margin-left: 20px;
+  font-size: 12px;
+  font-family: "Mulish", sans-serif;
+  color: #333;
+  line-height: 1.3;
+  /* display: none; */
+  visibility: hidden;
+}
+
+.card:hover .card__info-descrip {
+  /* display: block; */
+  /*tambien se puede usar */
+  visibility: visible;
+}
